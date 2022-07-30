@@ -1,20 +1,4 @@
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="https://ksaddami.github.io/style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="header"></div>
-      <div id="navigation"></div>
-      <div id="main"></div>
-      <div id="sidebar"></div>
-      <div id="footer"></div>
-    </div>
-    
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>W3.CSS Template</title>
