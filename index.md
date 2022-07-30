@@ -12,7 +12,7 @@
     </div>
     
     <div id="wrapper">
-    <div id="header"><h1>Heading</h1></div>
+      <div id="header"><h1>Khairun Saddami</h1><p>Senior Lecture at Department of Electrical and Computer Engineering, Universitas Syiah Kuala</p></div>
     <div id="navigation">
     <ul>
         <li><a href="#">Menu 1</a></li>
