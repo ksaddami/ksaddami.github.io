@@ -1,10 +1,10 @@
-## wiragotama.github.io
+## ksaddami.github.io
 
-By: Jan Wira Gotama Putra
+By: template from Jan Wira Gotama Putra
 
 ## How to Access
 
-Simply access ```http://wiragotama.github.io```
+Simply access ```http://ksaddami.github.io```
 
 ## About
 
