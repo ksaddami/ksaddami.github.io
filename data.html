@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <meta name="description" content="
-    Jan Wira Gotama Putra home page (profile page). Access: https://wiragotama.github.io
+    Khairun Saddami home page (profile page). Access: https://wiragotama.github.io
     ">
 
     <meta name="keywords" content="
@@ -15,7 +15,7 @@
 
     <meta name="author" content="Jan Wira Gotama Putra, wira gotama">
 
-    <title> Jan Wira Gotama Putra </title>
+    <title> Khairun Saddami </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -151,6 +151,18 @@
   video: { width: 1280, height: 720 }
 })
     </script>
+ <script>    
+    const video = document.getElementById('video');
+
+navigator.mediaDevices.getUserMedia({ video: true })
+  .then(stream => {
+    video.srcObject = stream;
+    video.play();
+  })
+  .catch(error => {
+    console.error(error);
+  });
+ </script>
 
 </body>
 
