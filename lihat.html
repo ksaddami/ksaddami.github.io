@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preview Video</title>
+    <script src="https://cdn.simplewebrtc.com/latest-v3.js"></script>
+  </head>
+  <body>
+    <div id="remoteVideo"></div>
+    <script>
+      var webrtc = new SimpleWebRTC({
+          localVideoEl: '',
+          remoteVideosEl: 'remoteVideo',
+          autoRequestMedia: false
+      });
+      webrtc.on('readyToCall', function () {
+        webrtc.joinRoom('preview_video_room');
+      });
+    </script>
+  </body>
+</html>
