@@ -150,19 +150,11 @@
   audio: true,
   video: { width: 1280, height: 720 }
 })
+        box.appendChild(video);
     </script>
- <script>    
-    const video = document.getElementById('video');
+ <div id="box"></div>
 
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then(stream => {
-    video.srcObject = stream;
-    video.play();
-  })
-  .catch(error => {
-    console.error(error);
-  });
- </script>
+    <script src="index.js"></script>
 
 </body>
 
