@@ -110,8 +110,22 @@
             </div>
         </div> <br>
         <!-- END LISTING -->
-<video id="webcam">
-  <!-- Video stream will be placed here -->
+<video>
+    <script>
+    
+    var constraints = { audio: true, video: { width: 1280, height: 720 } }; 
+
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('#webcam'); // <- Use a valid CSS selector to find your tag!
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); });
+                                                      
+</script>
 </video>
 
         <!-- Footer -->
@@ -133,21 +147,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
-        <script>
-    
-    var constraints = { audio: true, video: { width: 1280, height: 720 } }; 
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.querySelector('#webcam'); // <- Use a valid CSS selector to find your tag!
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); });
-                                                      
-</script>
+      
                                                        </body>
 
 </html>
